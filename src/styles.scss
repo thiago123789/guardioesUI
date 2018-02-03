@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 60px;
+    background-image: linear-gradient(rgba(36, 70, 105, 0.8), rgba(36, 70, 105, 0.8)),
+        url("assets/guardians.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.nav-item > .nav-link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+section {
+  margin-top: 1rem;
+}

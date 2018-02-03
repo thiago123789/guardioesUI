@@ -1,0 +1,17 @@
+<div class="list-group mt-2">
+  <a href="#" class="list-group-item active">
+    Lista de Lojas
+  </a>
+  <a routerLink="/compra/{{ 1 }}" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let loja of lojas">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ loja.nome }} </h5>
+      <small>
+        <p>
+          <i class="fa fa-star" style="color: yellow;"></i>
+          {{ loja.media_avaliacoes }}
+        </p>
+      </small>
+    </div>
+    <p class="mb-1">{{ loja.endereco }}</p>
+  </a>
+</div>
