@@ -7,7 +7,7 @@ import { ListarPorcoesComponent } from './listar-porcoes/listar-porcoes.componen
 import { InfoLojaComponent } from './info-loja/info-loja.component';
 import { ViewCompraComponent } from './view-compra/view-compra.component';
 import { AccountModule } from '../account/account.module';
-import { RouterModule } from '@angular/router/src/router_module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
