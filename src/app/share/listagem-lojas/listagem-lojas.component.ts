@@ -9,8 +9,8 @@ import { Loja } from '../model/loja.model';
 export class ListagemLojasComponent implements OnInit {
 
   lojas = [
-    <Loja>{"nome": "Quentinha da Maria", "endereco": "Olinda, no fim do mundo", "media_avaliacoes": 4.5 },
-    <Loja>{"nome": "Formigão Lanches", "endereco": "Dona Lindu", "media_avaliacoes": 3.0}
+    <Loja>{'nome': 'Quentinha da Maria', 'endereco': 'Olinda, no fim do mundo', 'media_avaliacoes': 4.5 },
+    <Loja>{'nome': 'Formigão Lanches', 'endereco': 'Dona Lindu', 'media_avaliacoes': 3.0}
   ];
 
   constructor() { }

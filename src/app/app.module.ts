@@ -10,13 +10,15 @@ import { ListagemLojasComponent } from './share/listagem-lojas/listagem-lojas.co
 import { LojaItemListaComponent } from './share/loja-item-lista/loja-item-lista.component';
 import { RealizarCompraRoutingModule } from './realizar-compra/realizar-compra-routing.module';
 import { RealizarCompraModule } from './realizar-compra/realizar-compra.module';
+import { ListagemCartoesComponent } from './share/listagem-cartoes/listagem-cartoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListagemLojasComponent,
-    LojaItemListaComponent
+    LojaItemListaComponent,
+    ListagemCartoesComponent
   ],
   imports: [
     BrowserModule,
