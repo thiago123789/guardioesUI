@@ -7,10 +7,13 @@ import { LoginComponent } from './account/login/login.component';
 import { AccountModule } from './account/account.module';
 import { AppModule } from './app.module';
 import { CartComponent } from './account/cart/cart.component';
-import { SelecionarItensComponent } from './realizar-compra/selecionar-itens/selecionar-itens.component';
 import { ViewCompraComponent } from './realizar-compra/view-compra/view-compra.component';
 
 const routes: Routes = [
+    {
+        path: '', 
+        redirectTo: '/home', 
+        pathMatch: 'full'},
     {
         path: 'home',
         children: [
@@ -21,15 +24,18 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'compra/:idLoja',
+        path: '',
         children: [
             {
-                path: '',
-                component: ViewCompraComponent
+                path: 'compra',
+                loadChildren: 'app/realizar-compra/realizar-compra.module#RealizarCompraModule'
+            },
+            {
+                path: 'loja',
+                loadChildren: 'app/gerenciamento-loja/gerenciamento-loja.module#GerenciamentoLojaModule'
             }
         ]
-    },   
-    {path: '', redirectTo: '/home', pathMatch: 'full'}
+    }
 ];
 
 @NgModule({

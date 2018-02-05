@@ -21,8 +21,7 @@ import { RealizarCompraModule } from './realizar-compra/realizar-compra.module';
   imports: [
     BrowserModule,
     AccountModule,
-    AppRoutingModule,
-    RealizarCompraModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
