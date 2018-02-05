@@ -8,6 +8,8 @@ import { Porcao } from '../share/model/porcao.model';
 @Injectable()
 export class RealizarCompraService {
 
+  private pratos: Prato[];
+
   constructor(private http: HttpClient) { }
 
   getLojas() : Observable<Loja[]> {
