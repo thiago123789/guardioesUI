@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-listar-pratos',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-pratos.component.scss']
 })
 export class ListarPratosComponent implements OnInit {
+
+  @Input()
+  lojaId: number;
 
   constructor() { }
 
