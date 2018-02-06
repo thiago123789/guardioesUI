@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Lista de Pratos</h3>
+  </div>
+  <div class="panel-body">
+    <div *ngIf="!this.itensCarregados" class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated active" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+        aria-valuemax="100" style="width: 100%">
+      </div>
+    </div>
+
+    <div class="list-group">
+      <a href="#" *ngFor="let prato of this.listaPratos; index as i" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Prato {{ i }}</h5>
+          <div class="d-inline-flex">
+            <div class="mr-2 ml-2">Quantidade:
+              <strong>{{ 0 }}</strong>
+            </div>
+            <strong>Valor Unitário: {{ prato.Preco | currency : 'BRL' }} </strong>
+          </div>
+        </div>
+        <div class="d-flex w-100 justify-content-between">
+          <p class="mb-1">Tamanho da Porçao: {{ 200 }}g</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger btn-sm">
+              <i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

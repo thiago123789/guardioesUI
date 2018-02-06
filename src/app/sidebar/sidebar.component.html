@@ -1,0 +1,18 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="https://www.creative-tim.com" class="simple-text">
+            <!-- <div class="logo-img">
+                <img src="../../assets/img/angular2-logo.png" alt="">
+            </div> -->
+            Guardioes das Quentinhas
+        </a>
+    </div>
+    <ul class="nav">
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}<span *ngIf="menuItem.title == 'Carrinho'" class="badge" style="margin-right: 0px; margin-left: 60px;">{{ itensCarrinho }}</span></p>
+            </a>
+        </li>
+    </ul>
+</div>

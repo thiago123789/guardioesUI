@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Lista de Porções</h3>
+    </div>
+    <div class="panel-body">
+      <div *ngIf="!this.itensCarregados" class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated active" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+          aria-valuemax="100" style="width: 100%">
+        </div>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let porcao of listaPorcoes">
+          
+          <div>{{ porcao.Item }}</div>
+          <div>{{ porcao.Quantidade }}</div>
+          <div>{{ porcao.Preco }}</div>
+        </li>
+        <!-- <li *ngIf="listaPorcoes.length == 0">Não existem porções para essa loja</li> -->
+      </ul>
+    </div>
+  </div>

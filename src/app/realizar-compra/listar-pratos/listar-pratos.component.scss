@@ -1,0 +1,28 @@
+div {
+    position: relative;
+
+    h5 {
+        font-weight: bold;
+    }
+
+    small > p {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .list-group-item {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .panel-body {
+        padding: 0px;
+    }
+
+    .list-group {
+        margin: 0px;
+    }
+
+
+}
