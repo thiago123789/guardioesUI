@@ -17,6 +17,9 @@
               </div>
               <p class="mb-1">{{ loja.EnderecoDaLoja }}</p>
             </a>
+
+            <a class="list-group-item list-group-item-action flex-column align-items-start sem-cont" *ngIf="!haveItens">Não existem lojas cadastradas</a>
+
           </div>
     </div>
   </div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { GerenciamentoLojaService} from '../gerenciamento-loja.service';
+import { GerenciamentoLojaModule } from 'app/gerenciamento-loja/gerenciamento-loja.module';
+import { ActivatedRoute } from '@angular/router';
+import { Prato } from '../../shared/model/prato.model';
 
 @Component({
   selector: 'app-cadastro-prato',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroPratoComponent implements OnInit {
 
-  constructor() { }
+  prato: Prato;
+
+  constructor(private service: GerenciamentoLojaService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.service.addPrato(this.prato)
+    .subscribe();
   }
 
 }

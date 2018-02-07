@@ -25,6 +25,10 @@ export const AppRoutes: Routes = [
                 component: UserComponent
             },
             {
+                path: 'lojas',
+                loadChildren:  'app/gerenciamento-loja/gerenciamento-loja.module#GerenciamentoLojaModule'
+            },
+            {
                 path: 'cart',
                 component: CartComponent
             },
