@@ -1,13 +1,10 @@
 .content {
     padding: 20px;
+    padding-bottom: 40px;
 }
 
 .my-c {
-    margin-top: 15px;
-
-    button {
-        margin-right: 0px !important;
-        margin-left: auto !important;
-    }
+    position: relative;
+    float: right;
 
 }

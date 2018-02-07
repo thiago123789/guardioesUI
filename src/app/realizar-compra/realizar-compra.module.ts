@@ -11,14 +11,17 @@ import { RouterModule } from '@angular/router';
 import { RealizarCompraService } from './realizar-compra.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CriarMeuPratoComponent } from './criar-meu-prato/criar-meu-prato.component';
-import { ListaPorcoesPratoComponent } from './lista-porcoes-prato/lista-porcoes-prato.component';
+import { ListarPorcoesPratoComponent } from './listar-porcoes-prato/listar-porcoes-prato.component';
+import { FormsModule } from '@angular/forms';
+import { ListaPorcoesPratoComponent } from 'app/realizar-compra/lista-porcoes-prato/lista-porcoes-prato.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RealizarCompraRoutingModule,
     AccountModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     ListarPratosComponent,
@@ -26,7 +29,11 @@ import { ListaPorcoesPratoComponent } from './lista-porcoes-prato/lista-porcoes-
     InfoLojaComponent,
     ViewCompraComponent,
     CriarMeuPratoComponent,
+    ListarPorcoesPratoComponent,
     ListaPorcoesPratoComponent
+  ],
+  exports: [
+    ListarPorcoesPratoComponent
   ],
   providers: [RealizarCompraService]
 })

@@ -9,18 +9,16 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
 import { NguiMapModule} from '@ngui/map';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
 import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
 import { RealizarCompraService } from 'app/realizar-compra/realizar-compra.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AccountModule } from 'app/account/account.module';
+import { ListarPorcoesPratoComponent } from 'app/realizar-compra/listar-porcoes-prato/listar-porcoes-prato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    UserComponent,
-    TableComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarModule,
     NavbarModule,
     FooterModule,
+    AccountModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   providers: [RealizarCompraService],

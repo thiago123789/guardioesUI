@@ -12,6 +12,10 @@ export class CartService {
     this.pratos.push(prato);
   }
 
+  listar() : Prato[] {
+    return this.pratos;
+  }
+
   
 
 }

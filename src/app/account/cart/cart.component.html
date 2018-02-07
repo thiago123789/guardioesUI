@@ -1,29 +1,35 @@
 <div class="card">
   <div class="header">
-    Meu Carrinho
+    <i class="fa fa-shopping-cart p-2" style="font-size: 3rem"></i><strong style="margin-left: 15px;">Meu Carrinho</strong>
+    <div class="btn-group meu-grupo" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-danger btn-sm">Limpar Carrinho</button>
+        <button type="button" class="btn btn-primary btn-sm">Finalizar Compra</button>
+      </div>
   </div>
-  <div class="card-body">
+  <div class="content">
     <div class="row">
-      <div class="col-lg-3">
-        <i class="fa fa-shopping-cart p-2" style="font-size: 3rem"></i>
+      <div class="col-lg-3 minha-div">
+          <div>
+              <strong class="p-2">Quantidade: {{ 1 }} item</strong>
+          </div>
+          <div>
+            <strong class="p-2">Subtotal: <span style="color: #B12704;">R$ 10</span></strong>
+          </div>
+          
       </div>
       <div class="col-lg-9">
-        <strong class="p-2">Quantidade: {{ 1 }} item</strong>
-        <strong class="p-2">Subtotal: <span style="color: #B12704;">R$ 10</span></strong>
+          
       </div>
     </div>
     <div>
     <div class="row p-3">
-        <div class="mx-auto btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-danger btn-sm">Limpar Carrinho</button>
-          <button type="button" class="btn btn-primary btn-sm">Finalizar Compra</button>
-        </div>
+        
     </div>
     <div class="row">
       <ul class="list-group w-100">
-        <li class="list-group-item active">Itens do Carrinho</li>
-        <li class="list-group-item">Item 1</li>
-        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item" *ngFor="let pratos of this.listaPratos">
+          
+        </li>
       </ul>
     </div>  
     </div>

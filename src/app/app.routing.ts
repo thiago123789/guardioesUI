@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
 import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
+import { CartComponent } from 'app/account/cart/cart.component';
 
 export const AppRoutes: Routes = [
     {
@@ -27,7 +26,7 @@ export const AppRoutes: Routes = [
             },
             {
                 path: 'cart',
-                component: TableComponent
+                component: CartComponent
             },
             {
                 path: 'compra',

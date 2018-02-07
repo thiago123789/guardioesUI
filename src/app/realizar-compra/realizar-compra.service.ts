@@ -24,4 +24,8 @@ export class RealizarCompraService {
     return this.http.get<Porcao[]>('http://localhost:2646/api/Loja/ListarPorcoesLoja?idLoja='+idLoja);
   }
 
+  getPorcoesPrato(idPrato: number) : Observable<Porcao[]> {
+    return this.http.get<Porcao[]>("http://localhost:2646/api/Loja/ListarPorcoesPrato?idPrato="+idPrato);
+  }
+
 }
