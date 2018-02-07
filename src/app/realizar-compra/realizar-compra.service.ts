@@ -12,20 +12,20 @@ export class RealizarCompraService {
 
   constructor(private http: HttpClient) { }
 
-  getLojas() : Observable<Loja[]> {
-    return this.http.get<Loja[]>("http://localhost:2646/api/Loja/ListarLojas");            
+  getLojas(): Observable<Loja[]> {
+    return this.http.get<Loja[]>(`http://localhost:2646/api/Loja/ListarLojas`);
   }
 
-  getPratos(idLoja: number) : Observable<Prato[]> {
-    return this.http.get<Prato[]>("http://localhost:2646/api/Loja/ListarPratosDaLoja?idLoja="+idLoja);
-  } 
-
-  getPorcoes(idLoja: number) : Observable<Porcao[]>  {
-    return this.http.get<Porcao[]>('http://localhost:2646/api/Loja/ListarPorcoesLoja?idLoja='+idLoja);
+  getPratos(idLoja: number): Observable<Prato[]> {
+    return this.http.get<Prato[]>(`http://localhost:2646/api/Loja/ListarPratosDaLoja?idLoja=${idLoja}`);
   }
 
-  getPorcoesPrato(idPrato: number) : Observable<Porcao[]> {
-    return this.http.get<Porcao[]>("http://localhost:2646/api/Loja/ListarPorcoesPrato?idPrato="+idPrato);
+  getPorcoes(idLoja: number): Observable<Porcao[]>  {
+    return this.http.get<Porcao[]>(`http://localhost:2646/api/Loja/ListarPorcoesLoja?idLoja=${idLoja}`);
+  }
+
+  getPorcoesPrato(idPrato: number): Observable<Porcao[]> {
+    return this.http.get<Porcao[]>(`http://localhost:2646/api/Loja/ListarPorcoesPrato?idPrato=${idPrato}`);
   }
 
 }

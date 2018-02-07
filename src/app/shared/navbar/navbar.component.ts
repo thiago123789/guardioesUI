@@ -30,14 +30,14 @@ export class NavbarComponent implements OnInit{
         this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
     }
     getTitle(){
-        var titlee = window.location.pathname;
+        let titlee = window.location.pathname;
         titlee = titlee.substring(1);
-        for(var item = 0; item < this.listTitles.length; item++){
+        for(let item = 0; item < this.listTitles.length; item++){
             if(this.listTitles[item].path === titlee){
                 return this.listTitles[item].title;
             }
         }
-        return 'Dashboard';
+        return 'Home';
     }
     sidebarToggle(){
         var toggleButton = this.toggleButton;

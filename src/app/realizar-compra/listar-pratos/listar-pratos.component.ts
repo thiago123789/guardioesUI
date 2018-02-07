@@ -14,6 +14,7 @@ export class ListarPratosComponent implements OnInit {
   lojaId: number;
 
   listaPratos: Prato[];
+  haveItens = true;
 
   itensCarregados = false;
   constructor(private service: RealizarCompraService, private activeRoute: ActivatedRoute) { }
@@ -26,10 +27,18 @@ export class ListarPratosComponent implements OnInit {
     this.service.getPratos(this.lojaId)
       .finally(() =>{
         this.itensCarregados = true;
+        if (this.listaPratos.length > 0) {
+          this.haveItens = true;
+        } else {
+          this.haveItens = false;
+        }
       })
       .subscribe((res: any) => {
         this.itensCarregados = false;
         this.listaPratos = res.Pratos;
+        if(this.listaPratos.length > 0) {
+          this.haveItens = true;
+        }
       });
   }
 
