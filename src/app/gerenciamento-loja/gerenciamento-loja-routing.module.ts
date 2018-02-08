@@ -11,11 +11,11 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'vendedor/:idVendedor/loja/:idLoja',
+        path: 'vendedor/:idVendedor',
         component: GerenciamentoLojaHomeComponent,
         children: [
           {
-            path: 'criar-porcao-prato',
+            path: 'loja/:idLoja/criar-porcao-prato',
             component: CriarPorcaoPratoComponent
           }
         ]
