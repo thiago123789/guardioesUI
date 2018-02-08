@@ -17,8 +17,8 @@ export class CadastroPratoComponent implements OnInit {
 
   ngOnInit() {
 
-    this.service.addPrato(this.prato)
-    .subscribe();
+    /*this.service.addPrato(this.prato)
+    .subscribe();*/
   }
 
 }

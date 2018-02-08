@@ -13,12 +13,10 @@ const routes: Routes = [
       {
         path: 'vendedor/:idVendedor',
         component: GerenciamentoLojaHomeComponent,
-        children: [
-          {
-            path: 'loja/:idLoja/criar-porcao-prato',
-            component: CriarPorcaoPratoComponent
-          }
-        ]
+      },
+      {
+        path: 'vendedor/:idVendedor/loja/:idLoja/criar-porcao-prato',
+        component: CriarPorcaoPratoComponent
       }
     ]
   }

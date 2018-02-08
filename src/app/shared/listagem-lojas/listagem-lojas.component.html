@@ -21,7 +21,7 @@
             </a>
           </div>
           <div *ngIf="isVendedor">
-              <a routerLink="/lojas/vendedor/{{vendedorId}}/loja/{{loja.Id}}/criar-porcao-prato"  class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let loja of this.filteredItems">
+              <a routerLink="loja/{{loja.Id}}/criar-porcao-prato" [queryParams]="loja"  class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let loja of this.filteredItems">
                 <div class="d-flex w-100 justify-content-between">
                   <h5>{{ loja.Nome }} </h5>
                   <small>

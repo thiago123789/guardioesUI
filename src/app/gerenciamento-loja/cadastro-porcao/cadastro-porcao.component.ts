@@ -16,8 +16,9 @@ export class CadastroPorcaoComponent implements OnInit {
   constructor(private service: GerenciamentoLojaService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.service.addPorcao(this.porcao)
-    .subscribe();
+    
   }
 
+  /*this.service.addPorcao(this.porcao)
+  .subscribe();*/
 }

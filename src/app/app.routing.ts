@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { UserComponent }   from './user/user.component';
 import { CartComponent } from 'app/account/cart/cart.component';
+import { CriarPorcaoPratoComponent } from 'app/gerenciamento-loja/criar-porcao-prato/criar-porcao-prato.component';
 
 export const AppRoutes: Routes = [
     {
