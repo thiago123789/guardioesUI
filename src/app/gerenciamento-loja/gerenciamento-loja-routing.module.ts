@@ -4,6 +4,7 @@ import { CadastroPorcaoComponent } from './cadastro-porcao/cadastro-porcao.compo
 import { CadastroPratoComponent } from './cadastro-prato/cadastro-prato.component';
 import { ListagemLojasComponent } from 'app/shared/listagem-lojas/listagem-lojas.component';
 import { GerenciamentoLojaHomeComponent } from 'app/gerenciamento-loja/gerenciamento-loja-home/gerenciamento-loja-home.component';
+import { CriarPorcaoPratoComponent } from 'app/gerenciamento-loja/criar-porcao-prato/criar-porcao-prato.component';
 
 const routes: Routes = [
   {
@@ -14,12 +15,8 @@ const routes: Routes = [
         component: GerenciamentoLojaHomeComponent,
         children: [
           {
-            path: 'prato',
-            component: CadastroPratoComponent
-          },
-          {
-            path: 'porcao',
-            component: CadastroPorcaoComponent
+            path: 'criar-porcao-prato',
+            component: CriarPorcaoPratoComponent
           }
         ]
       }

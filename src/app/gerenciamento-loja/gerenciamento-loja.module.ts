@@ -9,6 +9,7 @@ import { GerenciamentoLojaHomeComponent } from './gerenciamento-loja-home/gerenc
 import { ListagemLojasComponent } from 'app/shared/listagem-lojas/listagem-lojas.component';
 import { GerenciamentoLojaService } from 'app/gerenciamento-loja/gerenciamento-loja.service';
 import { StarterModule } from 'app/starter/starter.module';
+import { CriarPorcaoPratoComponent } from './criar-porcao-prato/criar-porcao-prato.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { StarterModule } from 'app/starter/starter.module';
   declarations: [
     CadastroPorcaoComponent,
     CadastroPratoComponent,
-    GerenciamentoLojaHomeComponent
+    GerenciamentoLojaHomeComponent,
+    CriarPorcaoPratoComponent
   ],
   providers: [
     GerenciamentoLojaService
